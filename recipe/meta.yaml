@@ -9,7 +9,6 @@ source:
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
     sha256: c7bf7f4d5955e1868739627928238d02f94ca9fd0caf110b0243d65548427899
     patches:
-      - patches/0001-Create-proc-in-the-container-used-for-unsquashfs-ext.patch
       - patches/0002-Remove-singularity.patch
       - patches/0003-Use-external-CNI.patch
 
