@@ -1,4 +1,4 @@
-{% set version = "1.1.2" %}
+{% set version = "1.1.4" %}
 
 package:
   name: apptainer
@@ -7,14 +7,14 @@ package:
 source:
   - folder: src/github.com/apptainer/apptainer
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
-    sha256: cfb7a26ac752a319ed70e58938155f257d14f1f414167bbe85ab8b941966d563
+    sha256: b1ab9d5842002803e66da8f456ee00f352ea2bb43436d5b668f19ef7475ed4a5
     patches:
       - patches/0001-Create-proc-in-the-container-used-for-unsquashfs-ext.patch
       - patches/0002-Remove-singularity.patch
       - patches/0003-Use-external-CNI.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
@@ -57,7 +57,7 @@ test:
 
     - test ! -d $PREFIX/etc/apptainer/network
     - test -f $PREFIX/etc/cni/net.d/00_bridge.conflist
- 
+
 about:
   home: https://apptainer.org/
   license: BSD-3-Clause
