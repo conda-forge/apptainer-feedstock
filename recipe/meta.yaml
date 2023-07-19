@@ -1,4 +1,4 @@
-{% set version = "1.1.9" %}
+{% set version = "1.2.0" %}
 
 package:
   name: apptainer
@@ -7,7 +7,7 @@ package:
 source:
   - folder: src/github.com/apptainer/apptainer
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
-    sha256: c615777539154288542cf393d3fd44c04ccb3260bc6330dc324d4e4ebe902bfa
+    sha256: 2b4a380f8b8bfdc67bfed69924a79500edf297bc11b817fb4db4ea87f0a95bd4
     patches:
       - patches/0002-Remove-singularity.patch
       - patches/0003-Use-external-CNI.patch
