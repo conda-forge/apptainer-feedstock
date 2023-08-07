@@ -9,7 +9,6 @@ source:
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
     sha256: fbb01542847020a869d6327f1dbc2833f74577db3097936e90e5385f7607d4b9
     patches:
-      - patches/0002-Remove-singularity.patch
       - patches/0003-Use-external-CNI.patch
 
 build:
