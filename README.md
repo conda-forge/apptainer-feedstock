@@ -198,6 +198,3 @@ Feedstock Maintainers
 * [@chrisburr](https://github.com/chrisburr/)
 * [@multimeric](https://github.com/multimeric/)
 
-
-<!-- dummy commit to enable rerendering -->
-
