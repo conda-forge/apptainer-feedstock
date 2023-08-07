@@ -13,7 +13,7 @@ source:
       - patches/0003-Use-external-CNI.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
@@ -37,18 +37,19 @@ requirements:
     # CNI version from singularity/Gopkg.lock
     - cni-plugins >=0.7.4  # [linux]
     - squashfs-tools  # [linux]
+  run_constrained:
+    - singularity ==9999999999
 
 test:
   commands:
     - apptainer --help
+    - singularity --help
     # disable these tests to ensure verbosity problem isn't from here (ngam)
     - apptainer --version
 
     # Ensure the version is set correctly
     - apptainer --version | grep {{ version }}
-
-    # Ensure the singularity symlink isn't created so we can install both at the same time
-    - test ! -f $PREFIX/bin/singularity
+    - singularity --version | grep {{ version }}
 
     # Ensure we are using conda's CNI
     - test ! -d $PREFIX/libexec/apptainer/cni
