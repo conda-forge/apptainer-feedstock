@@ -196,5 +196,6 @@ Feedstock Maintainers
 =====================
 
 * [@chrisburr](https://github.com/chrisburr/)
+* [@mbargull](https://github.com/mbargull/)
 * [@multimeric](https://github.com/multimeric/)
 
