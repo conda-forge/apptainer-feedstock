@@ -1,4 +1,4 @@
-{% set version = "1.3.2" %}
+{% set version = "1.3.3" %}
 
 package:
   name: apptainer
@@ -7,7 +7,7 @@ package:
 source:
   - folder: src/github.com/apptainer/apptainer
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
-    sha256: 483910727e1a15843b93d9f2db1fc87e27804de9c74da13cc32cd4bd0d35e079
+    sha256: 94a274ab4898cdb131f4e3867c4e15f7e16bc2823303d2afcbafee0242f0838d
     patches:
       - patches/0003-Use-external-CNI.patch
 
