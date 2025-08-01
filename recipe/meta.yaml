@@ -35,6 +35,7 @@ requirements:
   run:
     # CNI version from singularity/Gopkg.lock
     - cni-plugins >=0.7.4  # [linux]
+    - gocryptfs
     - squashfs-tools  # [linux]
     - fuse-overlayfs
     - squashfuse
