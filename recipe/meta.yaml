@@ -1,4 +1,4 @@
-{% set version = "1.4.1" %}
+{% set version = "1.4.2" %}
 
 package:
   name: apptainer
@@ -7,12 +7,12 @@ package:
 source:
   - folder: src/github.com/apptainer/apptainer
     url: https://github.com/apptainer/apptainer/releases/download/v{{ version }}/apptainer-{{ version }}.tar.gz
-    sha256: 77f25c756397a0886baf462ffdde0e21fe528063505c67a51460c165094d166d
+    sha256: 6dda1dd2ca8e42ed7f498d2bc8574f01d7ad3db68494e453639d76aef4424d1d
     patches:
       - patches/0003-Use-external-CNI.patch
 
 build:
-  number: 2
+  number: 1
   skip: true  # [not linux]
   # The binary is made runtime relocatable using the included patch
   detect_binary_files_with_prefix: false
