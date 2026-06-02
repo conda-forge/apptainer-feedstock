@@ -9,7 +9,7 @@ Package license: BSD-3-Clause
 
 Summary: Apptainer: Application containers for Linux
 
-Development: https://github.com/apptainer/apptainer/blob/main/CONTRIBUTING.md
+Development: https://github.com/apptainer/apptainer
 
 Documentation: https://apptainer.org/docs/
 
@@ -20,12 +20,18 @@ project with a friendly community of developers and users. The user base
 continues to expand, with Apptainer/Singularity now used across industry
 and academia in many areas of work.
 
-
 Current build status
 ====================
 
 
-<table>
+<table><tr>
+    <td>GitHub Actions</td>
+    <td>
+      <a href="https://github.com/conda-forge/apptainer-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/apptainer-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
+      </a>
+    </td>
+  </tr>
 </table>
 
 Current release info
