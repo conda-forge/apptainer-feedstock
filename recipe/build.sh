@@ -10,12 +10,14 @@ fi
 pushd src/github.com/apptainer/${PKG_NAME}
 
 # The "starter" binary inherits the stack from "singularity" meaning FORTIFY_SOURCE cannot be used
-CGO_CPPFLAGS=$(echo "${CGO_CPPFLAGS}" | sed -E 's@FORTIFY_SOURCE=[0-9]@FORTIFY_SOURCE=0@g')
+CGO_CPPFLAGS=$(echo "${CGO_CPPFLAGS:-}" | sed -E 's@FORTIFY_SOURCE=[0-9]@FORTIFY_SOURCE=0@g')
 export CGO_CPPFLAGS
 
 # configure
+# The "release-stripped" profile was removed upstream in 1.5.0; use "release"
+# (binaries are stripped by the conda build tooling anyway).
 ./mconfig \
-  -P release-stripped \
+  -P release \
   --without-suid \
   -V "${PKG_VERSION}" \
   -p "${PREFIX}" \
