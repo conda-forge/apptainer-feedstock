@@ -1,5 +1,5 @@
 context:
-  version: "1.5.3"
+  version: "1.5.4"
 
 package:
   name: apptainer
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://github.com/apptainer/apptainer/releases/download/v${{ version }}/apptainer-${{ version }}.tar.gz
-    sha256: 5a3bf360a5240086324aa7f7005ab7eeee91095e2091078b3f9783eaf6e7288a
+    sha256: ec1f51e696ba384f90bc7ab2c7a438fee70da98763d001b8f3175d14a91cfcf6
     target_directory: src/github.com/apptainer/apptainer
     patches:
       - patches/0003-Use-external-CNI.patch
